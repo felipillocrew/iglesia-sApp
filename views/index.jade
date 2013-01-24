@@ -1,0 +1,11 @@
+h1= title
+p Welcome to #{title}
+form(action='/login', method='post')
+  div
+    div.field Username
+    input(type='text', name='user')
+  div
+    div.field Password
+    input(type='password', name='pass')
+  div 
+    input.submit(type='submit')

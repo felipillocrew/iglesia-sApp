@@ -1,0 +1,25 @@
+h1= title
+p Welcome to #{title}, #{user.user}
+
+  div#container(dojoType="dojox.layout.GridContainer", opacity="0.3", nbZones="1", hasResizableColumns="false", style='width : 100%', isAutoOrganized='false', doLayout='false')
+    - widgets.forEach(function(widget) {
+      div(id=widget.id, dojoType='dojox.widget.Portlet', title=widget.title) #{widget.html}
+    - })
+
+p
+  a(href='/logout') Logout 
+
+
+script(type="text/javascript")
+  | dojo.require("dijit.dijit");
+  | dojo.require("dojox.widget.Portlet");
+  | dojo.require("dojox.widget.FeedPortlet");
+  | dojo.require("dojox.layout.GridContainer");
+  | dojo.require("dojox.widget.Calendar");
+  | function getIdsFromPortlets() { return dojo.query("div.dojoxPortlet", "container").attr("id").join(","); }
+  | dojo.addOnLoad(function() {
+  |   dojo.subscribe("/dojox/mdnd/drop" , function(data) {
+  |     ids = getIdsFromPortlets();
+  |     dojo.xhrPost({ url : "/config", postData : "ids="+ids, handleAs : "text" })
+  |   })
+  | })

@@ -1,0 +1,14 @@
+---
+applications:
+  .:
+    name: iglesia
+    framework:
+      name: node
+      info:
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    infra: aws
+    url: iglesia
+    mem: 128M
+    instances: 1

@@ -1,0 +1,26 @@
+Technologies used
+
+node.js				http://www.nodejs.org
+Node Packet Manager		http://npmjs.org/
+Express Web Framework		http://expressjs.com/
+Jade				http://github.com/visionmedia/jade
+Dojo JS Toolkit			http://dojotoolkit.org
+Mongoose			http://www.learnboost.com/mongoose/
+MongoDB				http://www.mongodb.org
+Connect				http://www.senchalabs.org/connect/
+
+
+Before starting the app
+
+1. Install node
+2. Install NPM
+3. Use NPM to install express and jade (npm install express && npm install jade && npm install mongoose && npm install mongodb && npm install connect)
+4. Download Mongoose, unpack it
+5. Run the app
+
+
+puedes instalar forever o nodemon, yo uso nodemon.
+
+
+
+
